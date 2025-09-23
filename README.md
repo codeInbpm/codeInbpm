@@ -47,9 +47,8 @@
 <p>&emsp;&emsp;嗨，你好，我是小王同学。热爱编程、摄影、读书、旅行。</p>
 <p>&emsp;&emsp;热爱计算机科学和 IT 互联网事业，希望能成为一名优秀的开发者。</p>
 <p>&emsp;&emsp;<strong>Do not go gently into that good night. Elderly people should burn and roar at dusk;Anger, anger at the disappearance of light.</strong></p>
+ A little more about me...  
 
-  <!-- for beauty 留个空行好看点 -->
-  <div>&nbsp;</div>
 ```javascript
 const anmol = {
     pronouns: "He" | "Him",
@@ -86,6 +85,11 @@ const anmol = {
     funFact: "I can debug faster with a coffee in hand!"
 };
 ```
+
+
+  <!-- for beauty 留个空行好看点 -->
+  <div>&nbsp;</div>
+
 </td></tr>
 
 
