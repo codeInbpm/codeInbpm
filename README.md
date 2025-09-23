@@ -52,26 +52,27 @@
 ```javascript
 const anmol = {
     pronouns: "He" | "Him",
-    code: ["TypeScript", "Javascript", "Python", "Dart"],
+    code: ["Java", "Javascript", "Python", "Vue"],
     askMeAbout: ["web dev", "app dev", "cloud computing", "UI/UX", "tech trends"],
     technologies: {
         frontEnd: {
-            js: ["React", "Next.js"],
+            js: ["Next.js"],
             css: ["Sass", "Tailwind", "Bootstrap"],
-            uiLibraries: ["Material UI", "Ant Design", "Chakra UI"],
+            uiLibraries: ["Element UI", "Ant Design", "Chakra UI"],
         },
         backEnd: {
             js: ["Node", "Express", "NestJS"],
             python: ["Flask"],
+            java: ["SpringBoot"、"Spring Cloud"],
         },
         mobileApp: {
-            crossPlatform: ["Flutter"],
+            crossPlatform: ["Uniapp"],
         },
         devOps: ["Docker🐳", "CI/CD", "Nginx", "GitHub Actions"],
         cloudServices: {
             aws: ["AWS Fargate", "EC2", "S3", "Lambda", "CloudWatch", "RDS"],
         },
-        databases: ["PostgreSQL", "MongoDB", "SQLite", "Firebase Realtime DB", "redis"],
+        databases: ["PostgreSQL", "MongoDB", "SQLite", "MySQL", "Redis","ElasticSearch"],
         misc: ["Socket.IO", "REST APIs", "WebSockets", "Cloud Functions"],
         generativeAI: ["GPT", "Vectorization"],
     },
