@@ -117,6 +117,7 @@ const anmol = {
   <img src="https://streak-stats.demolab.com/?user=codeInbpm&theme=dark&hide_border=true" />
 </picture>
 
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=codeInbpm&layout=compact&theme=tokyonight)
 
 
 <!-- GitHub Activity Graph GitHub 活动图 -->
