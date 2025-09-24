@@ -118,6 +118,7 @@ const anmol = {
 </picture>
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=codeInbpm&layout=compact&theme=tokyonight)
+![all-smile's GitHub stats](https://github-readme-stats.vercel.app/api?username=codeInbpm&show_icons=true&theme=tokyonight)
 
 
 <!-- GitHub Activity Graph GitHub 活动图 -->
