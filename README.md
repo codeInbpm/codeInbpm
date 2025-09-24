@@ -99,9 +99,6 @@ const anmol = {
 
 ## 📊 GitHub 数据统计
 
-
-
-
 ![tools_I_use](https://img.shields.io/badge/-%F0%9F%9A%80%20Tools%20I%20use-orange)
 ![semicolon](https://img.shields.io/badge/-%3A-orange)
 ![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=flat&logo=go&logoColor=white)
@@ -139,9 +136,16 @@ const anmol = {
   <img src="https://streak-stats.demolab.com/?user=codeInbpm&theme=dark&hide_border=true" />
 </picture>
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=codeInbpm&layout=compact&theme=tokyonight)
-
-![all-smile's GitHub stats](https://github-readme-stats.vercel.app/api?username=codeInbpm&show_icons=true&theme=tokyonight)
+<table>
+  <tr>
+    <td>
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=codeInbpm&layout=compact&theme=tokyonight" alt="Top Langs" />
+    </td>
+    <td>
+      <img src="https://github-readme-stats.vercel.app/api?username=codeInbpm&show_icons=true&theme=tokyonight" alt="all-smile's GitHub stats" />
+    </td>
+  </tr>
+</table>
 
 
 <!-- GitHub Activity Graph GitHub 活动图 -->
