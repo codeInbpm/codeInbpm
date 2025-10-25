@@ -1,47 +1,22 @@
-name: 3D Ribbons
+name: GitHub-Profile-3D-Contrib
 on:
-  push:
-    branches: [ main ]
   schedule:
     - cron: '0 0 * * *'  # 每天自动
   workflow_dispatch:
-permissions:
-  contents: write
-  actions: read  # 加actions权限
 jobs:
   build:
-    permissions:
-      contents: write  # job级权限
     runs-on: ubuntu-latest
+    name: generate-github-profile-3d-contrib
     steps:
-    - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-        token: ${{ secrets.PAT }}
-    - name: Debug Token  # 新增：检查token
-      run: |
-        echo "Token length: ${{ secrets.PAT_LENGTH }}"  # 验证PAT存在
-    - name: 3D Ribbon
-      uses: yoshi389111/github-profile-3d-contrib@v2  # 或试 @v1 如果v2 bug
-      env:
-        GITHUB_TOKEN: ${{ secrets.PAT }}
-      with:
-        DETAILED: "true"
-        SHEET: "1"
-        SHEET2: "2"
-        SHEET3: "3"
-        MANUFACTURER: "LEGO"
-        DISPLAY_HEADING_LABEL: "Don't forget to star 🌟"
-        CATEGORIES: "⭐ Emoji:1 | 💬 Pull Requests:2 | 📖 Wiki:3 | 📝 Issues:4"
-    - name: Commit & Push
-      run: |
-        git config user.email action@github.com
-        git config username github-actions
-        git add .
-        if git diff --staged --quiet; then
-          echo "No changes to commit"
-        else
-          git commit -m "Update 3D contrib"
-        fi
-        git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }}.git
-        git push || echo "Push failed - check token"
+      - uses: actions/checkout@v3
+      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+      - name: Commit & Push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -A
+          git commit -m "generated"
+          git push
