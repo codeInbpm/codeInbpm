@@ -1,0 +1,28 @@
+name: Generate Snake Animation
+on:
+  schedule:
+    - cron: "0 0 * * SUN"  # 每周日运行
+  workflow_dispatch:  # 允许手动触发
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate Snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake.svg?palette=github-light
+      - name: Push to repo
+        uses: actions/checkout@v4  # 覆盖旧文件
+        with:
+          fetch-depth: 0
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "Update snake animation" -a || echo "No changes"
+          git push
