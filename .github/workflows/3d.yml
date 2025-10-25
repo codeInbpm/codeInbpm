@@ -7,18 +7,24 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  actions: read  # 加actions权限
 jobs:
   build:
+    permissions:
+      contents: write  # job级权限
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0
-        token: ${{ secrets.PAT }}  # 用PAT checkout
+        token: ${{ secrets.PAT }}
+    - name: Debug Token  # 新增：检查token
+      run: |
+        echo "Token length: ${{ secrets.PAT_LENGTH }}"  # 验证PAT存在
     - name: 3D Ribbon
-      uses: yoshi389111/github-profile-3d-contrib@v2
+      uses: yoshi389111/github-profile-3d-contrib@v2  # 或试 @v1 如果v2 bug
       env:
-        GITHUB_TOKEN: ${{ secrets.PAT }}  # 用PAT for action
+        GITHUB_TOKEN: ${{ secrets.PAT }}
       with:
         DETAILED: "true"
         SHEET: "1"
@@ -26,13 +32,16 @@ jobs:
         SHEET3: "3"
         MANUFACTURER: "LEGO"
         DISPLAY_HEADING_LABEL: "Don't forget to star 🌟"
-        CATEGORIES: "⭐ Emoji:1 | 💬 Pull Requests:2 | 📖 Wiki:3 | 📝 Issues:4"  # 简化防bug
+        CATEGORIES: "⭐ Emoji:1 | 💬 Pull Requests:2 | 📖 Wiki:3 | 📝 Issues:4"
     - name: Commit & Push
       run: |
         git config user.email action@github.com
         git config username github-actions
         git add .
-        git diff --staged --quiet || git commit -m "Update 3D contrib"
-        # 用PAT push
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Update 3D contrib"
+        fi
         git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }}.git
-        git push
+        git push || echo "Push failed - check token"
