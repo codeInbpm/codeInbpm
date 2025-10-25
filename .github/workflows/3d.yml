@@ -11,7 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4  # 更新到v4，匹配蛇图
       with:
         fetch-depth: 0
     - name: 3D Ribbon
@@ -24,12 +24,15 @@ jobs:
         SHEET3: "3"
         MANUFACTURER: "LEGO"
         DISPLAY_HEADING_LABEL: "Don't forget to star 🌟"
-        REPO: "codeInbpm/codeInbpm"  # 你的仓库
+        # REPO可选，默认为当前repo，注释掉防错
+        # REPO: "codeInbpm/codeInbpm"
         CATEGORIES: "⭐ Emoji:1 | 💬 Pull Requests:2 | 📖 Wiki:3 | 📝 Issues:4 | ✅ Merged Pull Requests:5 | 📄 Releases:6 | 🏢 Organization:7 | 👥 People:8 | 🏆 Trophies:9 | 🎯 Achievements:10"
     - name: Commit & Push
       run: |
         git config user.email action@github.com
         git config username github-actions
         git add .
-        git commit -m "Update 3D contrib" || echo "No changes"
+        git diff --staged --quiet || git commit -m "Update 3D contrib"
+        # 加token防push auth fail
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
         git push
