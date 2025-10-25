@@ -168,9 +168,18 @@ funFact: "I can debug faster with a coffee in hand!"
 
 
 <!-- profile-3d-contrib 3D 贡献图-->
-<picture>
+<!-- <picture>
 <source media="(prefers-color-scheme: dark)" srcset="/profile-3d-contrib/profile-night-rainbow.svg" />
 <source media="(prefers-color-scheme: light)" srcset="/profile-3d-contrib/profile-gitblock.svg" />
 <img src="/profile-night-rainbow.svg" />
+</picture> -->
+
+<!-- profile-3d-contrib 3D 贡献图 -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/codeInbpm/codeInbpm/main/profile-3d-contrib/profile-night-rainbow.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/codeInbpm/codeInbpm/main/profile-3d-contrib/profile-gitblock.svg" />
+  <img src="https://raw.githubusercontent.com/codeInbpm/codeInbpm/main/profile-3d-contrib/profile-night-rainbow.svg" alt="3D Contribution Graph" />
 </picture>
+
+
 
