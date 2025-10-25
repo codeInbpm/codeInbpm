@@ -1,0 +1,35 @@
+name: 3D Ribbons
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * *'  # 每天自动更新
+  workflow_dispatch:  # 支持手动触发
+permissions:
+  contents: write  # 允许Actions push文件
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: 3D Ribbon
+      uses: yoshi389111/github-profile-3d-contrib@v2
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        DETAILED: "true"
+        SHEET: "1"
+        SHEET2: "2"
+        SHEET3: "3"
+        MANUFACTURER: "LEGO"
+        DISPLAY_HEADING_LABEL: "Don't forget to star 🌟"
+        REPO: "codeInbpm/codeInbpm"  # 你的仓库
+        CATEGORIES: "⭐ Emoji:1 | 💬 Pull Requests:2 | 📖 Wiki:3 | 📝 Issues:4 | ✅ Merged Pull Requests:5 | 📄 Releases:6 | 🏢 Organization:7 | 👥 People:8 | 🏆 Trophies:9 | 🎯 Achievements:10"
+    - name: Commit & Push
+      run: |
+        git config user.email action@github.com
+        git config username github-actions
+        git add .
+        git commit -m "Update 3D contrib" || echo "No changes"
+        git push
