@@ -55,41 +55,41 @@
 A little more about me...  
 
 ```javascript
-const brain = {
-pronouns: "He" | "Him",
-code: ["Java", "Javascript", "Python", "Vue"],
-askMeAbout: ["web dev", "app dev", "cloud computing", "UI/UX", "tech trends"],
-technologies: {
-frontEnd: {
-js: ["Next.js"],
-css: ["Sass", "Tailwind", "Bootstrap"],
-uiLibraries: ["Element UI", "Ant Design", "Chakra UI"],
-},
-backEnd: {
-js: ["Node", "Express", "NestJS"],
-python: ["Flask"],
-java: ["SpringBoot"、"Spring Cloud"],
-},
-mobileApp: {
-crossPlatform: ["Uniapp"],
-},
-devOps: ["Docker🐳", "CI/CD", "Nginx", "GitHub Actions"],
-cloudServices: {
-aws: ["AWS Fargate", "EC2", "S3", "Lambda", "CloudWatch", "RDS"],
-},
-databases: ["PostgreSQL", "MongoDB", "SQLite", "MySQL", "Redis","ElasticSearch"],
-misc: ["Socket.IO", "REST APIs", "WebSockets", "Cloud Functions"],
-generativeAI: ["GPT", "Vectorization"],
-},
-architecture: {
-frontEnd: ["SPA", "SSR"],
-backEnd: ["microservices", "monolithic", "serverless"],
-devOps: ["CloudFormation", "Serverless Framework"],
-databases: ["Relational", "NoSQL", "In-memory"],
-},
-currentFocus: "Leading a way in generative AI innovation",
-funFact: "I can debug faster with a coffee in hand!"
-};
+   const brain = {
+        pronouns: "He" | "Him",
+        code: ["Java", "Javascript", "Python", "Vue"],
+        askMeAbout: ["web dev", "app dev", "cloud computing", "UI/UX", "tech trends"],
+        technologies: {
+            frontEnd: {
+                js: ["Next.js"],
+                css: ["Sass", "Tailwind", "Bootstrap"],
+                uiLibraries: ["Element UI", "Ant Design", "Chakra UI"],
+            },
+            backEnd: {
+                js: ["Node", "Express", "NestJS"],
+                python: ["Flask"],
+                java: ["SpringBoot"、"Spring Cloud"],
+            },
+            mobileApp: {
+                crossPlatform: ["Uniapp"],
+            },
+            devOps: ["Docker🐳", "CI/CD", "Nginx", "GitHub Actions"],
+            cloudServices: {
+                aws: ["AWS Fargate", "EC2", "S3", "Lambda", "CloudWatch", "RDS"],
+            },
+            databases: ["PostgreSQL", "MongoDB", "SQLite", "MySQL", "Redis","ElasticSearch"],
+            misc: ["Socket.IO", "REST APIs", "WebSockets", "Cloud Functions"],
+            generativeAI: ["GPT", "Vectorization"],
+        },
+        architecture: {
+            frontEnd: ["SPA", "SSR"],
+            backEnd: ["microservices", "monolithic", "serverless"],
+            devOps: ["CloudFormation", "Serverless Framework"],
+            databases: ["Relational", "NoSQL", "In-memory"],
+        },
+        currentFocus: "Leading a way in generative AI innovation",
+        funFact: "I can debug faster with a coffee in hand!"
+    };
 ```
 
 
