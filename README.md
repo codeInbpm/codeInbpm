@@ -55,7 +55,6 @@
 A little more about me...  
 
 ```javascript
-const anmol = {
 const brain = {
 pronouns: "He" | "Him",
 code: ["Java", "Javascript", "Python", "Vue"],
