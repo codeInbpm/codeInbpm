@@ -144,10 +144,10 @@ A little more about me...
 <table>
 <tr>
 <td>
- <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=codeInbpm&layout=compact&theme=tokyonight" alt="Top Langs" />
+ <img src="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=codeInbpm&layout=compact&theme=tokyonight" alt="Top Langs" />
 </td>
 <td>
- <img src="https://github-readme-stats.vercel.app/api?username=codeInbpm&show_icons=true&theme=tokyonight" alt="all-smile's GitHub stats" />
+ <img src="https://github-readme-stats-one-bice.vercel.app/api?username=codeInbpm&show_icons=true&theme=tokyonight" alt="codeInbpm's GitHub stats" />
 </td>
 </tr>
 </table>
